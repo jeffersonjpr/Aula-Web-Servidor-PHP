@@ -9,10 +9,15 @@
 <body>
     <h1>Erros tratamentos   </h1>
     <?php
+        set_error_handler(function($errno, $errstr, $errfile, $errline){
+            echo "<h1> Erro (erro_handler): $errstr 420</h1>" . "<br>";
+            echo "Erro: $errstr - $errfile - $errline";
+        });
+
         function divisao($a, $b){
-            ini_set('display_errors', 1);
+            // ini_set('display_errors', 1);
             if($b == 0){
-                throw new Exception("Não é possível dividir por zero");
+                trigger_error("Não é possível dividir por zero", E_USER_ERROR);
             }
             return $a / $b;
         }
@@ -20,9 +25,9 @@
         try{
             echo divisao(10, 0);
         }catch(Exception $e){
-            echo "Erro: " . $e->getMessage() . "<br>";
+            echo "Erro (CATCH): " . $e->getMessage() . "<br>";
         }finally{
-            echo "Executou o try" . "<br>";
+            echo "<br>". "Executou o try (CATCH)" . "<br>";
         }
     ?>
 </body>
