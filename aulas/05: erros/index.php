@@ -10,8 +10,9 @@
     <h1>Erros tratamentos   </h1>
     <?php
         function divisao($a, $b){
+            ini_set('display_errors', 1);
             if($b == 0){
-                trigger_error("Não é possível dividir por zero", E_USER_ERROR);
+                throw new Exception("Não é possível dividir por zero");
             }
             return $a / $b;
         }
