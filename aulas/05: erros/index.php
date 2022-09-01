@@ -8,8 +8,9 @@
 </head>
 <body>
     <?php
-        error_reporting(E_ERROR);
-        include("adsfs.php");
+        ini_set('display_errors', 1);
+        include 'adsfs.php';
+        require 'adsfs.php';
     ?>
 </body>
 </html>
