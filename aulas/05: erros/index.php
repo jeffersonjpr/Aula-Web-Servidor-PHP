@@ -7,6 +7,7 @@
     <title>Erros</title>
 </head>
 <body>
+    <h1>Erros tratamentos   </h1>
     <?php
         ini_set('display_errors', 1);
         include 'adsfs.php';
