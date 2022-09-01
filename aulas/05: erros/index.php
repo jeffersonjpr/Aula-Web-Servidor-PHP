@@ -9,9 +9,13 @@
 <body>
     <h1>Erros tratamentos   </h1>
     <?php
-        ini_set('display_errors', 1);
-        include 'adsfs.php';
-        require 'adsfs.php';
+        function divisao($a, $b){
+            if($b == 0){
+                trigger_error("Não é possível dividir por zero", E_USER_ERROR);
+            }
+            return $a / $b;
+        }
+        echo divisao(10, 0);    
     ?>
 </body>
 </html>
