@@ -16,7 +16,14 @@
             }
             return $a / $b;
         }
-        echo divisao(10, 0);    
+        
+        try{
+            echo divisao(10, 0);
+        }catch(Exception $e){
+            echo "Erro: " . $e->getMessage() . "<br>";
+        }finally{
+            echo "Executou o try" . "<br>";
+        }
     ?>
 </body>
 </html>
