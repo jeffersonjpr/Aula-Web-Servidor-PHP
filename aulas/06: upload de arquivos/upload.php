@@ -1,3 +1,5 @@
 <?php
-echo "<pre>";
-print_r($_FILES['utfpr']);
+ 
+ $tmp = $_FILES['utfpr']['tmp_name'];
+ $file_name = $_FILES['utfpr']['name'];
+ move_uploaded_file($tmp, './uploads/'.$file_name);
