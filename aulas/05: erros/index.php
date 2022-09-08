@@ -9,15 +9,14 @@
 <body>
     <h1>Erros tratamentos   </h1>
     <?php
-        set_error_handler(function($errno, $errstr, $errfile, $errline){
-            echo "<h1> Erro (erro_handler): $errstr 420</h1>" . "<br>";
-            echo "Erro: $errstr - $errfile - $errline";
+        set_exception_handler(function($e){
+            echo "Erro: {$e->getMessage()}";
         });
 
         function divisao($a, $b){
             // ini_set('display_errors', 1);
             if($b == 0){
-                trigger_error("Não é possível dividir por zero", E_USER_ERROR);
+                throw new Error("Não é possível dividir por zero");
             }
             return $a / $b;
         }
