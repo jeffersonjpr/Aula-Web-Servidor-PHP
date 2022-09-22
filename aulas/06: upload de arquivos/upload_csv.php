@@ -3,6 +3,9 @@ echo "<pre>";
 $file_path = $_FILES['utfpr']['tmp_name'];
 $file_name = $_FILES['utfpr']['name'];
 
+echo "file_path: $file_path" . PHP_EOL;
+echo "file_name: $file_name" . PHP_EOL;
+
 move_uploaded_file($file_path, "tmp/$file_name");
 
 $file = file_get_contents("tmp/$file_name");

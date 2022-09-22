@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API2</title>
+</head>
+
+<body>
+    <h1>Avaliação Prática Individual 2</h1>
+    <h2>Jefferson Michael de Azevedo Junior</h2>
+    <h3>Ra: 2058979</h3>
+    <hr>
+    <!-- form -->
+    <form method="post" action="proc_notas.php" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Nome" required> <br>
+        <input type="text" name="ra" placeholder="RA" required> <br>
+        <input type="radio" name="sexo" value="Masculino" required> Masculino
+        <input type="radio" name="sexo" value="Feminino" required> Feminino <br>
+        <input type="text" name="cidade" placeholder="Cidade" required> <br>
+        <select name="uf">
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select> <br>
+
+        <input type="file" name="notas"> <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
